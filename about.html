@@ -1,5 +1,6 @@
 ---
 layout: default
+banner_image: /images/plant.jpg
 team:
 - name: Greg
   bio: Big Boss Coder
@@ -13,7 +14,7 @@ team:
   bio: Designer/part time model
   description: Eligendi inventore, amet voluptas asperiores consequatur nemo aperiam quis repellendus animi iusto aliquam modi tempora!
   profile_image: images/profile-3.jpg
-
+about-video-id: n_uFzLPYDd8
 ---
 
 <section class="tall-60 grid bg-green">
@@ -22,20 +23,23 @@ team:
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus ex ut, eaque ratione amet neque ipsum? Cupiditate ipsam voluptatem quia corporis repellendus inventore perspiciatis illum totam nihil maiores! Molestiae, consequuntur?</p>
     </div>
 
-    <div class="col-7 bg-image bg-plant">
+    <div class="col-7 bg-image bg-plant" style="background-image: url('{{page.banner_image}}');">
 
     </div>
 </section> 
 
 <section class="padded">
+
+    <div class="capped-width"> 
+
      {% for person in page.team %}
 
-        <div class="grid">
-            <div class="col-5 padded-1">
+        <div class="grid flex-flip-alternate">
+            <div class="col-5 padded-2">
                 <img src="{{ person.profile_image }}" class="profile-image">
             </div>
             <div class="col-7-middle padded-1">
-                <h3> {{ person.name }} </h3>
+                <h3> Meet {{ person.name }} </h3>
                 <p> <strong> {{ person.bio }} </strong> </p>
                 <p> {{ person.description }} </p>
             </div>
@@ -43,4 +47,23 @@ team:
 
      {% endfor %}
 
+    </div>
+
 </section>
+
+<section class="padded bg-green center">
+
+    <h2 class="editable"> Watch our corny "meet the team" video </h2>
+    <p class="emphasis editable"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. </p>
+
+    <div class="padded-1">
+
+    <div class='embed-container'><iframe src='https://www.youtube.com/embed/{{page.about-video-id}}' frameborder='0' allowfullscreen></iframe></div>
+
+    </div>
+
+</section>
+
+
+
+
