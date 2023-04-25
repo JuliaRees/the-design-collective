@@ -155,6 +155,10 @@ footer a:hover {
     background-image: url('/images/plant.jpg');
 }
 
+.profile-image {
+    border-radius: 100%;
+}
+
 .bg-plant {
     background-image: url('/images/plant.jpg');
     background-position: 50% 43%;
